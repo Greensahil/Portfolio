@@ -1,6 +1,38 @@
 
-
 <% include ./partials/header.ejs %>
+
+
+
+
+
+
 <h1>This is my Portfolio!</h1>
 
+<div id="typed-strings">
+    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+    <p>It <em>types</em> out sentences.</p>
+</div>
+<span id="typed"></span>
+
+
+
+  <script>
+  
+  
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings'
+  });
+
+</script>
+
+ 
+ 
+
+
+
+
+
 <% include ./partials/footer.ejs %>
+
+
+
