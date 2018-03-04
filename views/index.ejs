@@ -1,7 +1,14 @@
 
 <% include ./partials/header.ejs %>
 
-
+<style>
+ 
+ /*#typed{*/
+ /* text-align:center;*/
+ /* font-size:20px;*/
+ /*}*/
+ 
+</style>
 
 
 
@@ -20,7 +27,11 @@
   
   
   var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings'
+    stringsElement: '#typed-strings',
+     typeSpeed:50,
+    backSpeed:50,
+    smartBackspace:true,
+    loop:true
   });
 
 </script>
