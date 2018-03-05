@@ -3,10 +3,23 @@
 
 <style>
  
- /*#typed{*/
- /* text-align:center;*/
- /* font-size:20px;*/
- /*}*/
+ #first-typed{
+     font-size:14px;
+     color:red;
+     
+     
+     
+ }
+ 
+
+ 
+.typed-cursor {
+    color:red;
+}
+
+#typed{
+    color:red;
+}
  
 </style>
 
@@ -15,9 +28,13 @@
 
 <h1>This is my Portfolio!</h1>
 
+
+
 <div id="typed-strings">
-    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-    <p>It <em>types</em> out sentences.</p>
+    <p class="first-typed">I am a</p>
+    <p class="second-typed">I am a Developer</p>
+    <p class="second-typed">I am a Designer</p>
+    <p class="second-typed">I am a Student</p>
 </div>
 <span id="typed"></span>
 
@@ -30,7 +47,7 @@
     stringsElement: '#typed-strings',
      typeSpeed:50,
     backSpeed:50,
-    smartBackspace:true,
+    // smartBackspace:true,  //defaut
     loop:true
   });
 
