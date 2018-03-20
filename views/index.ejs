@@ -17,11 +17,11 @@ h1 {
 
 div.item {
   position: relative;
-  float: left;
+  /*float: left;*/
   overflow: hidden;
   margin: 10px 1%;
   min-width: 220px;
-  max-width: 310px;
+  max-width: 510px;
   width: 100%;
   background:#000000;
   text-align: center;
@@ -33,7 +33,7 @@ div.item * {
 }
 
 div.item img {
-  max-width: 100%;
+ width:100%;
   vertical-align: top;
   height: 210px;
 }
@@ -97,8 +97,6 @@ div .item i {
 div.item:hover i {
   transform:translate(-50%,-50%) scale(1);
 }
-
-
 
 
 </style>
@@ -183,20 +181,35 @@ div.item:hover i {
   
 <h1>Web development projects</h1>
 <div class="container">
-<div class="item red">
+<div class="row">
+  <div class="col-md-4 col-sm-6">
+    <div class="item red">
 	<img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg"/>
 	<i class="fa fa-camera"></i>
 </div>
 
-<div class="item blue">
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="item blue">
 	<img src="http:i.imgur.com/AhCfhrF.jpg"/>
 	<i class="fa fa-paw"></i>
 </div>
-
-<div class="item green">
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <div class="item green">
 	<img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg"/>
 	<i class="fa fa-cloud"></i>
 </div>
+  </div>
+  
+  
+  
+  
+</div>
+
+
+
+
   
   </div>
 
