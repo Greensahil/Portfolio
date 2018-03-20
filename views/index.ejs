@@ -1,62 +1,206 @@
 
 <% include ./partials/header.ejs %>
-
 <style>
- 
- #first-typed{
-     font-size:14px;
-     color:red;
-     
-     
-     
- }
- 
-
- 
-.typed-cursor {
-    color:red;
+.experience{
+    background-color:#F8F8F8;
+    /*width:50%;*/
 }
 
-#typed{
-    color:red;
+/*Projects*/
+h1 {
+  text-align: center;
+  font-family: Raleway;
+  color: #34495e;
 }
- 
+
+
+
+div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background:#000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+div.item * {
+  box-sizing: border-box;
+}
+
+div.item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 210px;
+}
+
+div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
+
+div.item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+div.item.blue {
+  background-color: #34495e;
+}
+div.item.blue i {
+  color: #34495e;
+}
+div.item.red {
+  background-color: #e74c3c;
+}
+div.item.red i {
+  color: #e74c3c;
+}
+
+div.item.green {
+  background-color: #16a085;
+}
+div.item.green i {
+  color: #16a085;
+}
+
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+div .item *{
+  transition:all 0.35s ease-in-out;
+}
+
+
+div .item i {
+  transform:translate(-50%,-50%) scale(0);
+  transition:i 0.35s ease-in-out;
+  
+}
+div.item:hover i {
+  transform:translate(-50%,-50%) scale(1);
+}
+
+
+
+
 </style>
 
+<div class="writer">
 
+    <span id="typed-strings">
+    <span>Welcome to my website</span>
+    <span>I am a Developer</span>
+    <span>I am a Designer</span>
+    <span>I am a Student</span>
+    </span>
 
-
-<h1>This is my Portfolio!</h1>
-
-
-
-<div id="typed-strings">
-    <p class="first-typed">I am a</p>
-    <p class="second-typed">I am a Developer</p>
-    <p class="second-typed">I am a Designer</p>
-    <p class="second-typed">I am a Student</p>
+<div class="text-center">
+    <span id="typed"></span>
 </div>
-<span id="typed"></span>
+</h1>
+
+</div>
 
 
+<center><h1>Programming tools proficiency</h1></center>
 
-  <script>
+<div class="container" >
+	<div class="row skills">                   
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                <span class="sr-only">60% Complete</span>
+               
+            </div>
+             <span class="progress-type">HTML / HTML5</span>
+            <span class="progress-completed">100%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">40% Complete (success)</span>
+            </div>
+            <span class="progress-type">CSS3</span>
+            <span class="progress-completed">80%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                <span class="sr-only">85% Complete (info)</span>
+            </div>
+            <span class="progress-type">Bootstrap</span>
+            <span class="progress-completed">85%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80% Complete (warning)</span>
+            </div>
+            <span class="progress-type">JavaScript / jQuery</span>
+            <span class="progress-completed">80%</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                <span class="sr-only">80% Complete (danger)</span>
+            </div>
+            <span class="progress-type">Nodejs</span>
+            <span class="progress-completed">85%</span>
+        </div>
+	</div>
+</div>
+
+
+<hr>
+ 
+ <center><h1 class="experience">Projects</h1></center>
+
+<div class="container">
+    <div class="main-image">
+    <img src="https://i.imgur.com/z654dlt.png" alt="Placeholder" class="custom">
+  </div>
+ 
+  <ul class="thumbnails">
+    <li><a href="https://s.w.org/about/images/logos/wordpress-logo-simplified-rgb.png"><img src="https://s.w.org/about/images/logos/wordpress-logo-simplified-rgb.png" alt="Thumbnails"></a></li>
+    <li><a href="https://www.e-conomix.at/blog/wp-content/uploads/2011/03/html5-logo.jpg"><img src="https://www.e-conomix.at/blog/wp-content/uploads/2011/03/html5-logo.jpg" alt="Thumbnails"></a></li>
+    <li><a href="https://2.bp.blogspot.com/-xdZxDAStMTc/UQRY8nCnmuI/AAAAAAAAW98/sqp4pXNrlE8/s1600/Backbone_logo_logo_only.png"><img src="https://2.bp.blogspot.com/-xdZxDAStMTc/UQRY8nCnmuI/AAAAAAAAW98/sqp4pXNrlE8/s1600/Backbone_logo_logo_only.png" alt="Thumbnails"></a></li>
+    <li><a href="http://www.geeks.gallery/wp-content/uploads/2014/10/angularjs-logo-trans.png"><img src="http://www.geeks.gallery/wp-content/uploads/2014/10/angularjs-logo-trans.png" alt="Thumbnails"></a></li>
+  </ul> 
+</div>
   
-  
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-     typeSpeed:50,
-    backSpeed:50,
-    // smartBackspace:true,  //defaut
-    loop:true
-  });
+<h1>Web development projects</h1>
+<div class="container">
+<div class="item red">
+	<img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg"/>
+	<i class="fa fa-camera"></i>
+</div>
 
-</script>
+<div class="item blue">
+	<img src="http:i.imgur.com/AhCfhrF.jpg"/>
+	<i class="fa fa-paw"></i>
+</div>
+
+<div class="item green">
+	<img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg"/>
+	<i class="fa fa-cloud"></i>
+</div>
+  
+  </div>
 
  
- 
-
-
 
 
 
