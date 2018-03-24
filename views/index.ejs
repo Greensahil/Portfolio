@@ -5,7 +5,7 @@
    /*width:50%;*/
    }
    /*Projects*/
-  h1 {
+h1 {
   text-align: center;
   font-family: Raleway;
   color: #34495e;
@@ -16,7 +16,6 @@
 }
 
 div.item {
-  height:210px;
   position: relative;
   float: left;
   overflow: hidden;
@@ -40,11 +39,9 @@ div.item img {
 }
 
 div.item i {
-/*   position: absolute; */ 
-  
-  position:relative;
-  top:-45%;
-  left: 10%;
+  position: relative;
+  top: -50%;
+  left: 30%;
   border-radius: 50%;
   font-size: 34px;
   color: #000000;
@@ -54,13 +51,7 @@ div.item i {
   background: #ffffff;
 }
 
-div.item a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
+
 
 div.item.blue {
   background-color: #34495e;
@@ -99,6 +90,29 @@ div.item i {
 div.item:hover i {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+ 
+div .item .devicon-bootstrap-plain{
+    display:block;
+    font-size:40px;
+    transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+/*.projects{*/
+/*     position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  border-radius: 50%;*/
+/*  font-size: 34px;*/
+/*  color: #000000;*/
+/*  width: 60px;*/
+/*  height: 60px;*/
+/*  line-height: 60px;*/
+  /*background: #ffffff;*/
+    
+    
+    
 }
  
 </style>
@@ -171,14 +185,16 @@ div.item:hover i {
       <li><a href="http://www.geeks.gallery/wp-content/uploads/2014/10/angularjs-logo-trans.png"><img src="http://www.geeks.gallery/wp-content/uploads/2014/10/angularjs-logo-trans.png" alt="Thumbnails"></a></li>
    </ul>
 </div>
+
+<i class="devicon-bootstrap-plain"></i>
+<i class="fa fa-camera"></i>
 <h1>An Image Gallery</h1>
 <div class="container">
 <div class="item red">
 	<img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg"/>
-
 	<i class="fa fa-camera"></i>
-  <i class="fa fa-css3"></i>
-  <i class="fa fa-html5"></i>
+  <i class="fa fa-paw"></i>
+  <i class="devicon-bootstrap-plain"></i>
 </div>
 
 <div class="item blue">
@@ -192,5 +208,6 @@ div.item:hover i {
 </div>
   
   </div>
+
 
 <% include ./partials/footer.ejs %>
