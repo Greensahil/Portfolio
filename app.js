@@ -4,6 +4,10 @@ var bodyParser= require('body-parser');
 
 
 
+app.use(express.static(__dirname + "/img"));
+
+
+
 
 app.use(express.static(__dirname+ "/public"));
 
