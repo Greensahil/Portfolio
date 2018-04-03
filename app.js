@@ -29,11 +29,11 @@ app.post("/send",function(req,res){
     `
     let transporter = nodemailer.createTransport({
         host: 'smtp.mailgun.org',
-        port: 587,
+        port: 2525,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: "postmaster@sandbox9e932c7cd76c40c782731e8a66509aa5.mailgun.org", // generated ethereal user
-            pass: "ede26dd4cad13a9de091becff7892b16-bdd08c82-77e81c50" // generated ethereal password
+            user: 'postmaster@sandbox9e932c7cd76c40c782731e8a66509aa5.mailgun.org', // generated ethereal user
+            pass: 'ede26dd4cad13a9de091becff7892b16-bdd08c82-77e81c50' // generated ethereal password
         },
         tls:{
             rejectUnauthorized:false
@@ -43,7 +43,7 @@ app.post("/send",function(req,res){
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Nodemailer contact" <foo@example.com>', // sender address
-        to: 'greenncoder@gmail.com, ssharma2@svsu.edu', // list of receivers
+        to: 'greenncoder@gmail.com', // list of receivers
         subject: 'Node contact request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
@@ -54,7 +54,6 @@ app.post("/send",function(req,res){
         if (error) {
             return console.log(error);
         }
-        console.log(output)
         console.log('Message sent: %s', info.messageId);
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
