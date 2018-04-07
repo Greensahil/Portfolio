@@ -90,7 +90,7 @@ div.item:hover i {
   transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
  
-div .item .devicon-bootstrap-plain{
+div .item .devicon-bootstrap-plain, div .item .devicon-css3-plain,div .item .devicon-html5-plain,div .item .devicon-nodejs-plain,div .item .devicon-mongodb-plain {
     position: relative;
     top: -43%;
     left: 10%;
@@ -136,6 +136,7 @@ div .item .devicon-bootstrap-plain{
 .contact{
     font-family:Karma;
 }
+
 </style>
 
 <img src="https://static.pexels.com/photos/604898/pexels-photo-604898.jpeg" style="display:none;">
@@ -196,30 +197,36 @@ div .item .devicon-bootstrap-plain{
 <hr>
 
 
-<h1>Web Development Projects</h1>
+<h1 id="projectscroll">Web Development Projects</h1>
 
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="item red">
         	<img src="/delimandu.png"/>
-        	<i class="fa fa-camera"></i>
-          <i class="fa fa-paw"></i>
+        	<i class="devicon-html5-plain"></i>
           <i class="devicon-bootstrap-plain"></i>
+       <i class="devicon-css3-plain"></i>
+       <i class="devicon-nodejs-plain"></i>
         </div>
     </div>
     <div class="col-md-4 col-sm-12">
-         <div class="item red">
+         <div class="item green">
         	<img src="/website.png"/>
-        	<i class="fa fa-camera"></i>
-          <i class="fa fa-paw"></i>
+        <i class="devicon-html5-plain"></i>
           <i class="devicon-bootstrap-plain"></i>
+       <i class="devicon-css3-plain"></i>
+       <i class="devicon-nodejs-plain"></i>
+       <i class="devicon-mongodb-plain"></i>
     </div>    
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="item blue">
 	<img src="/website2.png"/>
-	<i class="fa fa-paw"></i>
+	<i class="devicon-html5-plain"></i>
+          <i class="devicon-bootstrap-plain"></i>
+       <i class="devicon-css3-plain"></i>
+       <i class="devicon-nodejs-plain"></i>
 </div>
         
     </div>
@@ -239,13 +246,16 @@ div .item .devicon-bootstrap-plain{
 
 
 <!--Contact me-->
- <% if(success && success.length>0) {%>
-<div class="alert alert-success" role="alert">
+<div>
+     <% if(success && success.length>0) {%>
+<div class=" container-fluid alert alert-success" role="alert">
    
 <%= success %>
 <% } %>  
     
-</div>   
+</div>
+</div>
+   
 
 
 
