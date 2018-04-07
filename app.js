@@ -6,6 +6,10 @@ var bodyParser= require('body-parser');
 var flash   = require('connect-flash');
 var nodemailer=require('nodemailer')
 var session = require('express-session');
+var cookieParser = require('cookie-parser');
+
+
+
 
 
 
@@ -15,27 +19,30 @@ app.set('view engine','ejs')
 app.use(express.static(__dirname+ "/public"));
 app.use(express.static(__dirname + "/img"));
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(flash());
+app.use(bodyParser.json());
+app.use(cookieParser('secretString'));
 app.use(session({ cookie: { maxAge: 60000 }, 
                   secret: 'sahil',
                   resave: false, 
                   saveUninitialized: false}));
 
-app.use(bodyParser.json());
+app.use(flash());
+
+
 
 
 //Middleware to handle flash message
 app.use(function(req, res, next){
-  res.locals.message = req.flash();
+  res.locals.success = req.flash("success");
   next();
 });
 
 
 
 app.get("/",function(req,res){
-    res.render('index',{message:req.flash("info")})
+    res.render('index')
     
-    
+
 })
 
 app.post("/send",function(req,res){
@@ -79,12 +86,13 @@ app.post("/send",function(req,res){
         console.log('Message sent: %s', info.messageId);
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
+        
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
     req.flash("success","Message has been sent")
-    res.render('index')
+
+    res.render('index',{success:req.flash("success")})
     
     
 })

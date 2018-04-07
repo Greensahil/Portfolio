@@ -239,10 +239,14 @@ div .item .devicon-bootstrap-plain{
 
 
 <!--Contact me-->
-<% if(message) {%>
-    <h3>Message has been sent</h3>
+ <% if(success && success.length>0) {%>
+<div class="alert alert-success" role="alert">
+   
+<%= success %>
+<% } %>  
     
-<% } %>    
+</div>   
+
 
 
 
