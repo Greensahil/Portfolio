@@ -3,7 +3,10 @@
 var express = require('express');
 var app     = express();
 var bodyParser= require('body-parser');
+var flash   = require('connect-flash');
 var nodemailer=require('nodemailer')
+var session = require('express-session');
+
 
 
 // let transporter = nodemailer.createTransport(options[, defaults])
@@ -12,9 +15,28 @@ app.set('view engine','ejs')
 app.use(express.static(__dirname+ "/public"));
 app.use(express.static(__dirname + "/img"));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(flash());
+app.use(session({ cookie: { maxAge: 60000 }, 
+                  secret: 'sahil',
+                  resave: false, 
+                  saveUninitialized: false}));
 
 app.use(bodyParser.json());
 
+
+//Middleware to handle flash message
+app.use(function(req, res, next){
+  res.locals.message = req.flash();
+  next();
+});
+
+
+
+app.get("/",function(req,res){
+    res.render('index',{message:req.flash("info")})
+    
+    
+})
 
 app.post("/send",function(req,res){
     const output=`
@@ -61,16 +83,13 @@ app.post("/send",function(req,res){
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
-    res.render('index',{msg:"Email has been sent"})
-    
-    
-})
-
-app.get("/",function(req,res){
+    req.flash("success","Message has been sent")
     res.render('index')
     
     
 })
+
+
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
